@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Loto-Sorte</title>
+    
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- Barra de navegacao-->
+   <nav class="navbar navbar-default">
+     <div class="container">
+       
+      <div class="navbar-header">
+        <!-- Aqui vamos criar uma barra de menu para aparecer em telas menores -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
+          <!-- Aqui é para no caso de leitores de tela -->
+          <span class="sr-only">Menu</span>
+          <!-- Aqui é para escolher quantas barras tera na nossa barra de menu,no caso utilizo 3 -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+           
+        </button>
+
+        <a href="#" class="navbar-brand">LOTOSORTE</a>
+      </div>
+      <!-- perceba o id,esse que usamos como data-target linhas acima -->
+      <div class="collapse navbar-collapse" id="barra-navegacao">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li> <a href="index.html">home</a> </li>
+          <li> <a href="aposta.html">apostar</a> </li>
+          <li> <a href="#">regras</a> </li>
+          <li> <a href="#">sobre</a> </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Minha Conta <span class="caret"></span>
+            </a>
+              <ul class="dropdown-menu">
+                <li> <a href="#">Configuracoes</a> </li>
+                <li> <a href="#">Editar</a> </li>
+                 <li> <a href="#">Sair</a> </li>
+              </ul>
+
+            </li>
+
+        </ul>
+
+      </div>
+
+     </div>
+
+   </nav>
+
+    <!--fim da nav-->
+   
+   <div class="container">
+
+    <div class="page-header">
+     <!-- <h1 align="center" class="azul">LOTOSORTE</h1>-->
+      <img src="img/logosorte.jpg" alt="" class="img-responsive" align="center">
+    </div>
+
+    <div class="col-xs-7">
+      <h3 class="verde">Como Apostar</h3>
+      <p>
+        Como os nossos usuarios devem saber estavamos em manutencao para trazer algumas novidades.
+      </p>
+
+      <p>
+        Uma das novidades e que na sena(6 numeros de 1-30)que voce passava a ganhar acertando a partir de 4 numeros agora ficou ainda mais facil,agora passa a ganhar acertando tambem o terno 10% da quadra (se por exemplo cada um dos nossos apostadores ganharem 500$ acertando a quadra,entao cada apostador que acertar o terno recebe 50R$).
+      </p>
+
+      <p>
+        A outra novidade e o nosso novo jogo <span class="verde">Dia premiado</span>.Esse jogo acontece todos os dias uteis,nele voce pode escolher o valor que quer apostar(apartir de 3R$) e escolhe 10 numeros de 1-40,nele voce passa a ganhar acertando a partir de 2 numeros.Se acertar 2 ganha o valor apostado,se acertar 3 ganha o dobro e assim sucessivamente.
+      </p>
+      
+    </div>
+
+    <div class="col-xs-5">
+      <h3 align="center">Aposte agora</h3>
+      <h4 align="center" class="verde">Sena</h4>
+      
+      <p align="center">
+      <i>seg,qua,sex  39,000</i>
+      </p>
+      <form method="post" action="sena.php" id="aposta-sena">
+          <div class="form-group">
+            <!--<label for="nome">Nome</label>-->
+            <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+          </div>
+
+          <div class="form-group">
+          <input class="form-control" type="text" name="cidade" id="cidade" placeholder="Cidade">
+          </div>
+
+          <div class="form-group">
+           <!-- <label for="email"></label>-->
+            <input class="form-control" type="text" name="numeros" id="numeros" placeholder="Digite os seis numeros">
+          </div>
+           <button class="btn btn-primary">Apostar</button>
+
+
+        </form>
+
+        <h4 align="center" class="verde">Dia premiado</h4>
+        <p align="center">
+          <i>seg-sex</i>
+       </p>
+        <form method="post" action="diapremiado.php" id="aposta-diapremiado">
+          <div class="form-group">
+            <!--<label for="nome">Nome</label>-->
+            <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+          </div>
+
+          <div class="form-group">
+          <input class="form-control" type="text" name="cidade" id="cidade" placeholder="Cidade">
+          </div>
+
+          <div class="form-group">
+           <!-- <label for="email"></label>-->
+            <input class="form-control" type="text" name="numeros" id="numeros" placeholder="Digite os dez numeros">
+          </div>
+
+          <div class="form-group">
+           <!-- <label for="email"></label>-->
+            <input class="form-control" type="text" name="valor" id="valor" placeholder="Valor da aposta">
+          </div>
+
+          <button class="btn btn-primary">Apostar</button>
+
+        </form>
+        <br>
+         <p class="vermelho">Para mais detalhes fale com o cambista</p>
+
+    </div>
+
+    </div>   
+
+   </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
